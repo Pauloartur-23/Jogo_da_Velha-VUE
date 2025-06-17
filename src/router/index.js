@@ -1,18 +1,22 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import JogoView from "@/views/JogoView.vue"
+// src/router/index.js
+import { createRouter, createWebHistory } from 'vue-router';
+import Jogo from '@/components/JogoView.vue';
+import Home from '@/components/HomeView.vue';
+
+const routes = [
+    { 
+        path: '/', 
+        component: Home
+    },
+    { 
+        path: '/jogo', 
+        component: Jogo
+    },
+];
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
-        {
-            path: '/',
-            name: 'jogo ',
-            component: JogoView,
-            meta: {
-                title: 'Jogo da Velha'
-            }
-        },
-    ],
-})
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;
