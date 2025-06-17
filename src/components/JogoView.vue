@@ -248,7 +248,7 @@ export default {
 }
 
 .cell {
-  background-image: url("../public/images.jpeg");
+  background-image: url("../public/images.jpeg") or #396a67;
   border: 2.5px solid #000000;
   font-size: 3rem;
   font-weight: 900;
